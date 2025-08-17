@@ -87,8 +87,8 @@
 }
 
 .hero-icon:hover {
-  background: #a78bfa;
-  color: #23243a;
+  background: rgba(167, 139, 250, 0.18);
+  color: #a78bfa;
 }
 
 @media (max-width: 700px) {
