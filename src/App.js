@@ -1,6 +1,8 @@
 
 import './App.css';
 import Breadcrumb from './components/Breadcrumb/Breadcrumb';
+import Hero from './components/Hero/Hero';
+import About from './components/About/About';
 import Button from './components/Button/Button';
 import Card from './components/Card/Card';
 import Carousel from './components/Carousel/Carousel';
@@ -15,9 +17,11 @@ import Slideshow from './components/Slideshow/Slideshow';
 
 function App() {
   const navLinks = [
-    { label: 'Home', href: '#' },
-    { label: 'Portfolio', href: '#portfolio' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Home', href: '#home' },
+    { label: 'About', href: '#about' },
+    { label: 'Skills', href: '#skills' },
+    { label: 'Projects', href: '#projects' },
+    { label: 'Contacts', href: '#contacts' },
   ];
   const breadcrumbItems = ['Home', 'Portfolio'];
   const portfolioItems = [
@@ -41,8 +45,10 @@ function App() {
   ];
   return (
     <div className="App">
-      <Navigation links={navLinks} />
-      <Breadcrumb items={breadcrumbItems} />
+  <Navigation links={navLinks} />
+  <Hero />
+  <Breadcrumb items={breadcrumbItems} />
+  <About />
       <h1>My Portfolio</h1>
       <Carousel>
         <Slideshow images={slideshowImages} />
