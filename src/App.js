@@ -3,6 +3,7 @@ import './App.css';
 import Breadcrumb from './components/Breadcrumb/Breadcrumb';
 import Hero from './components/Hero/Hero';
 import About from './components/About/About';
+import Skills from './components/Skills/Skills';
 import Button from './components/Button/Button';
 import Card from './components/Card/Card';
 import Carousel from './components/Carousel/Carousel';
@@ -11,8 +12,12 @@ import Footer from './components/Footer/Footer';
 import Navigation from './components/Navigation/Navigation';
 import Pagination from './components/Pagination/Pagination';
 import PortfolioItem from './components/PortfolioItem/PortfolioItem';
+
+
 import Slider from './components/Slider/Slider';
 import Slideshow from './components/Slideshow/Slideshow';
+import Projects from './components/Projects/Projects';
+import Contact from './components/Contact/Contact';
 
 
 function App() {
@@ -47,25 +52,12 @@ function App() {
     <div className="App">
   <Navigation links={navLinks} />
   <Hero />
-  <Breadcrumb items={breadcrumbItems} />
+  
   <About />
-      <h1>My Portfolio</h1>
-      <Carousel>
-        <Slideshow images={slideshowImages} />
-      </Carousel>
-      <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', justifyContent: 'center' }}>
-        {portfolioItems.map((item, idx) => (
-          <PortfolioItem key={idx} {...item} />
-        ))}
-      </div>
-      <Card>
-        <h2>Contact Me</h2>
-        <Checkbox label="Subscribe to newsletter" checked={false} onChange={() => {}} />
-        <Slider min={0} max={10} value={5} onChange={() => {}} />
-        <Button>Send Message</Button>
-      </Card>
-      <Pagination current={1} total={3} onPageChange={() => {}} />
-      <Footer />
+  <Skills />
+  <Projects />
+  <Contact />
+  <Footer />
     </div>
   );
 }
