@@ -14,7 +14,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   padding:0 2rem;
 }
@@ -65,4 +65,56 @@
   border-radius: 50%;
   background: #a78bfa;
   margin-top: 4px;
+  
+}
+
+
+@media screen and (max-width: 600px) {
+ 
+ .nav-content{
+    width: 100%;
+    margin: 0rem;
+    padding: 0;
+  
+ }
+    .navigation{
+    padding:1rem;
+   
+ }
+
+ .nav-links{
+     gap: 1rem;
+     width: 100%;
+ }
+
+ .nav-links li{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+   
+
+ }
+ .nav-links li a{
+    width: 100%;
+;
+ }
+
+ .nav-links a{
+    font-size: 0.8rem;
+   width: 100%;
+ }
+
+ 
+ .nav-links a::after{
+margin-top: 0.4rem;
+width: 0.4rem;
+height: 0.4rem;
+color: #a78bfa;
+ }
+
+ .nav-logo{
+   display: none;
+ }
 }

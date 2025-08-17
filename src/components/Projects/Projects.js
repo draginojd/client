@@ -82,10 +82,7 @@ const Projects = () => {
                 </div>
               </div>
               <div className="project-desc">{p.description}</div>
-              <div className="project-meta">
-                <div><span className="project-meta-label">Duration:</span> {p.duration}</div>
-                <div><span className="project-meta-label">Team:</span> {p.team}</div>
-              </div>
+
               <div className="project-tech">
                 {p.tech.map(tech => (
                   <span className="project-tech-item" key={tech}>{tech}</span>
