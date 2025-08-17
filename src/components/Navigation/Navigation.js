@@ -2,17 +2,30 @@ import React from 'react';
 import './Navigation.css';
 
 
+
+const scrollToSection = (e, href) => {
+  e.preventDefault();
+  const id = href.replace('#', '');
+  const el = document.getElementById(id);
+  if (el) {
+    const y = el.getBoundingClientRect().top + window.pageYOffset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
+};
+
 const Navigation = ({ links }) => (
   <nav className="navigation">
     <div className="nav-content">
       <div className="nav-logo">
-        <a href="#home">
+        <a href="#home" onClick={e => scrollToSection(e, '#home')}>
           <img src={process.env.PUBLIC_URL + '/logo192.png'} alt="Logo" height="40" />
         </a>
       </div>
       <ul className="nav-links">
         {links.map((link, idx) => (
-          <li key={idx}><a href={link.href}>{link.label}</a></li>
+          <li key={idx}>
+            <a href={link.href} onClick={e => scrollToSection(e, link.href)}>{link.label}</a>
+          </li>
         ))}
       </ul>
     </div>

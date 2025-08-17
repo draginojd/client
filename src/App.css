@@ -1,3 +1,18 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* Custom smooth scroll duration for navigation */
+html, body {
+  scroll-behavior: auto;
+}
+
+/* Custom smooth scroll for navigation links */
+.smooth-scroll {
+  scroll-behavior: smooth;
+  transition: scroll 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
 .App {
   text-align: center;
 }
