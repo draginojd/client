@@ -15,10 +15,11 @@ html, body {
 }
 .App {
   text-align: center;
-  width: 100%;
+  display: block;
   height: 100%;
-  position: relative;
-  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+   width: 100%;
+  position: absolute;
+  background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
   z-index: 1;
 }
 
@@ -27,7 +28,7 @@ html, body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: rgba(20, 20, 30, 0.7);
   z-index: 2;
@@ -38,16 +39,7 @@ html, body {
   position: relative;
   z-index: 3;
 }
-@media screen {
-  .App {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    
 
-  }
-}
 
 .App-logo {
   height: 40vmin;
