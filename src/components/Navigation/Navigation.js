@@ -1,35 +1,68 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Navigation.css';
 
 
 
-const scrollToSection = (e, href) => {
+
+const scrollToSection = (e, href, setActive) => {
   e.preventDefault();
   const id = href.replace('#', '');
   const el = document.getElementById(id);
   if (el) {
     const y = el.getBoundingClientRect().top + window.pageYOffset;
     window.scrollTo({ top: y, behavior: 'smooth' });
+    setActive(href);
   }
 };
 
-const Navigation = ({ links }) => (
-  <nav className="navigation">
-    <div className="nav-content">
-      <div className="nav-logo">
-        <a href="#home" onClick={e => scrollToSection(e, '#home')}>
-          <img src={process.env.PUBLIC_URL + '/logo192.png'} alt="Logo" height="40" />
-        </a>
+const Navigation = ({ links }) => {
+  const [active, setActive] = useState(links[0]?.href || '#home');
+
+  // Update active link on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      let found = false;
+      for (let i = links.length - 1; i >= 0; i--) {
+        const section = document.getElementById(links[i].href.replace('#', ''));
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= 80) {
+            setActive(links[i].href);
+            found = true;
+            break;
+          }
+        }
+      }
+      if (!found) setActive(links[0]?.href || '#home');
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [links]);
+
+  return (
+    <nav className="navigation">
+      <div className="nav-content">
+        <div className="nav-logo">
+          <a href="#home" onClick={e => scrollToSection(e, '#home', setActive)}>
+            <img src={process.env.PUBLIC_URL + '/logo192.png'} alt="Logo" height="40" />
+          </a>
+        </div>
+        <ul className="nav-links">
+          {links.map((link, idx) => (
+            <li key={idx}>
+              <a
+                href={link.href}
+                className={active === link.href ? 'active' : ''}
+                onClick={e => scrollToSection(e, link.href, setActive)}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
-      <ul className="nav-links">
-        {links.map((link, idx) => (
-          <li key={idx}>
-            <a href={link.href} onClick={e => scrollToSection(e, link.href)}>{link.label}</a>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </nav>
-);
+    </nav>
+  );
+};
 
 export default Navigation;
