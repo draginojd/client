@@ -164,6 +164,9 @@
 .project-action-btn.code {
   background: #23243a;
   color: #a78bfa;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .project-action-btn.code:hover {
   background: #a78bfa;
