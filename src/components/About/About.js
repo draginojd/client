@@ -2,7 +2,7 @@ import React from 'react';
 import './About.css';
 
 
-const skills = ['React', 'TypeScript', 'Docker', 'Kubernetes', 'AWS', 'CI/CD'];
+const skills = ['React', 'CSS', 'Docker', 'Kubernetes', 'OpenShift 4', 'CI/CD'];
 
 const features = [
   {

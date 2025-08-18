@@ -5,10 +5,9 @@ const skillsData = [
   {
     title: 'Frontend Development',
     items: [
-      'React / Next.js',
-      'TypeScript / JavaScript',
-      'Tailwind CSS',
-      'Vue.js',
+      'React / Vite',
+      'JavaScript',
+    
       'HTML5 / CSS3',
       'Responsive Design',
     ],
@@ -19,7 +18,7 @@ const skillsData = [
       'Node.js / Express',
       'Python / Django',
       'Docker / Kubernetes',
-      'AWS / Azure / GCP',
+      'OpenShift 4 / Tekton',
       'CI/CD Pipelines',
       'Infrastructure as Code',
     ],
@@ -27,11 +26,10 @@ const skillsData = [
   {
     title: 'Database & Tools',
     items: [
-      'PostgreSQL / MySQL',
+      'SQL / MySQL',
       'MongoDB',
-      'Redis',
       'Git / GitHub Actions',
-      'Terraform',
+      "GitHub CoPilot",
       'Monitoring & Logging',
     ],
   },
