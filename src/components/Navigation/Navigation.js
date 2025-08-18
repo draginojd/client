@@ -44,7 +44,7 @@ const Navigation = ({ links }) => {
       <div className="nav-content">
         <div className="nav-logo">
           <a href="#home" onClick={e => scrollToSection(e, '#home', setActive)}>
-            <img src={process.env.PUBLIC_URL + '/logo192.png'} alt="Logo" height="40" />
+           Armin Fazli Khan
           </a>
         </div>
         <ul className="nav-links">

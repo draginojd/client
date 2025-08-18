@@ -61,6 +61,10 @@
   font-size: 1.08rem;
 }
 
+.contact-info-item span a {
+  color: #ba5ff7;
+}
+
 .contact-info-icon {
   font-size: 1.3rem;
 }

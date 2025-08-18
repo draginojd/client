@@ -13,15 +13,15 @@ const Contact = () => (
         <div className="contact-info">
           <div className="contact-info-item">
             <span className="contact-info-icon">📧</span>
-            <span><b>contact@example.com</b></span>
+            <span><b>arminfazlikhan@gmail.com</b></span>
           </div>
           <div className="contact-info-item">
             <span className="contact-info-icon">📞</span>
-            <span><b>+1 (555) 123-4567</b></span>
+            <span><a href="tel:+46702038040" className="contact-phone"><b>+46 (70) 203 80 40</b></a></span>
           </div>
           <div className="contact-info-item">
             <span className="contact-info-icon">📍</span>
-            <span><b>San Francisco, CA</b></span>
+            <span><b>Stockholm, Sweden</b></span>
           </div>
         </div>
         <div className="contact-socials">
