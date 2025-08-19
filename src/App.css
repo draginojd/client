@@ -40,6 +40,23 @@ html, body {
   z-index: 3;
 }
 
+/* Custom cursor: hide native cursor and show our cursor */
+body, .App {
+  cursor: none;
+}
+
+.typewriter-caret::after{
+  content: '|';
+  margin-left: 6px;
+  color: #a78bfa;
+  opacity: 0.9;
+  animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink{
+  to { opacity: 0; }
+}
+
 
 .App-logo {
   height: 40vmin;

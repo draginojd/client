@@ -18,6 +18,7 @@ import Slider from './components/Slider/Slider';
 import Slideshow from './components/Slideshow/Slideshow';
 import Projects from './components/Projects/Projects';
 import Contact from './components/Contact/Contact';
+import Cursor from './components/Cursor/Cursor';
 
 
 function App() {
@@ -50,6 +51,7 @@ function App() {
   ];
   return (
     <div className="App">
+  <Cursor />
   <Navigation links={navLinks} />
   <Hero />
   

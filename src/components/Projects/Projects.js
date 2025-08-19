@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Projects.css';
+import { motion } from 'framer-motion';
 
 const filters = [
   { label: 'All Projects', value: 'all' },
@@ -80,7 +81,12 @@ const Projects = () => {
       </div>
       <div className="projects-list">
         {filtered.map((p, idx) => (
-          <div className="project-card" key={p.title + idx}>
+          <motion.div className="project-card" key={p.title + idx}
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6, delay: idx * 0.08 }}
+          >
             <img src={p.image} alt={p.title} className="project-image" />
             <div className="project-content">
               <div className="project-header">
@@ -108,7 +114,7 @@ const Projects = () => {
                 <a href={p.demo} className="project-action-btn demo" target="_blank" rel="noopener noreferrer">Live Demo</a>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

@@ -1,5 +1,7 @@
 import React from 'react';
 import './Hero.css';
+import { motion } from 'framer-motion';
+import Typewriter from 'typewriter-effect';
 
 
 const scrollToProjects = (e) => {
@@ -25,10 +27,24 @@ const Hero = () => (
   <section className="hero-section" id="home">
     <div className="hero-bg" />
     <div className="hero-content">
-      <h1 className="hero-title">DevOps Engineer &amp; <br />Frontend Developer</h1>
-      <p className="hero-subtitle">
+      <motion.h1 className="hero-title typewriter-caret"
+        initial={{ y: 20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6 }}
+      >
+        <Typewriter
+       
+          options={{ loop: false, delay: 200 }}
+          onInit={(tw) => {
+            tw.typeString('DevOps Engineer & Frontend Developer').start();
+          }}
+        />
+      </motion.h1>
+
+      <motion.p className="hero-subtitle" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }}>
         Building scalable infrastructure and beautiful user experiences with modern technologies
-      </p>
+      </motion.p>
+
       <div className="hero-actions">
         <a href="#projects" className="hero-btn" onClick={scrollToProjects}>View My Work <span className="arrow">↓</span></a>
         <a href="https://github.com/yourusername" className="hero-icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub">

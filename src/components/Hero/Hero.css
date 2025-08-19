@@ -48,6 +48,10 @@
   line-height: 1.1;
 }
 
+.hero-title.typewriter-caret::after {
+display: none;
+}
+
 .hero-subtitle {
   font-size: 1.35rem;
   color: #b3b6d4;
