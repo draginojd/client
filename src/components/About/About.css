@@ -78,7 +78,8 @@
   color: #a78bfa;
   font-size: 1.2rem;
   font-weight: 600;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.4rem;
+  text-align: left;
 }
 
 .about-feature-desc {
@@ -125,6 +126,9 @@
     
   }
   
+  .about-feature-title {
+    text-align: center;
+  }  
   .about-feature-icon {
   
     scale: 1.4;

@@ -5,7 +5,7 @@ const filters = [
   { label: 'All Projects', value: 'all' },
   { label: 'DevOps', value: 'devops' },
   { label: 'Frontend', value: 'frontend' },
-  { label: 'Full Stack', value: 'fullstack' },
+  { label: 'Backend', value: 'backend' },
 ];
 
 const projects = [
@@ -19,12 +19,12 @@ const projects = [
     tech: ['React', 'Node.js', 'Docker', 'Kubernetes', 'PostgreSQL', 'Redis'],
     code: '#',
     demo: '#',
-    filter: ['devops', 'frontend', 'fullstack'],
+    filter: ['devops', 'frontend', 'backend'],
   },
   {
-    title: 'Cloud Infrastructure Automation',
+    title: 'Age Prediction App',
     image: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80',
-    description: 'Infrastructure as Code solution using Terraform and Ansible. Automated deployment of multi-tier applications across AWS with monitoring and alerting.',
+    description: 'A simple age prediction app using the Agify.Io open-source API. This app is just for fun and is relying on data from the API to predict user age. It is not based on accurate data.',
     tags: ['DevOps'],
     duration: '4 months',
     team: '3 engineers',
@@ -46,14 +46,14 @@ const projects = [
     filter: ['frontend'],
   },
   {
-    title: 'Cinema Booking System',
+    title: 'Booking System',
     image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=600&q=80',
     description: 'Cinema/movie booking website with seat selection, showtimes, payment integration, and an admin dashboard. Built as a full-stack app with a React frontend and Express/Node backend.',
-    tags: ['Frontend', 'Full Stack'],
+    tags: ['Frontend', 'Backend'],
     tech: ['React', 'Javascript', 'Express', 'Node.js', 'MongoDB', "JSON"],
     code: '#',
     demo: '#',
-    filter: ['frontend', 'fullstack'],
+    filter: ['frontend', 'backend'],
   },
 ];
 
