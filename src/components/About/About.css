@@ -85,6 +85,7 @@
 .about-feature-desc {
   color: #b3b6d4;
   font-size: 1.01rem;
+  text-align: left;
 }
 
 @media (max-width: 900px) {

@@ -7,7 +7,7 @@ const skills = ['React', 'CSS', 'Docker', 'Kubernetes', 'OpenShift 4', 'CI/CD'];
 const features = [
   {
     title: 'Infrastructure',
-    description: 'Expert in cloud infrastructure, containerization, and CI/CD pipelines',
+    description: 'Experience in cloud infrastructure, containerization, and CI/CD pipelines',
     icon: (
       <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="32" height="32" rx="12" fill="#23243a" />
